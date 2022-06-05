@@ -1,4 +1,4 @@
-console.log('fetch a rainbow')
+console.log('fetching an img')
 
 catchRainbow()
   .then(response => {
@@ -10,18 +10,7 @@ catchRainbow()
   });
 
 async function catchRainbow() {
-    const response = await fetch('rainbow.jpg');
+    const response = await fetch('mystery.jpg');
     const Blob = await response.blob();
-    document.getElementById('rainbow').src = URL.createObjectURL(Blob);
+    document.getElementById('back').src = URL.createObjectURL(Blob);
 }
-
-// fetch('rainbow.jpg').then(response => {
-//     console.log(response);
-//     return response.blob();
-// }).then(Blob => {
-//     console.log(Blob);
-// })
-// .catch(err => {
-//     console.log('error');
-//     console.error(err);
-// });
