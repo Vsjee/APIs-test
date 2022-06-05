@@ -7,8 +7,8 @@ async function getData() {
     const ans =  await response.json()
 
     let list = []
-    for(let i = 0; i<20; i++) {
-        list.push(ans[i].symbol + " : " +ans[i].lastPrice)
+    for(let i = 0; i<2066; i++) {
+        list.push(ans[i].symbol + ' : ' +ans[i].lastPrice)
     }
 
     lists(list)
@@ -27,5 +27,4 @@ const lists = (list) => {
         listData.append(listDataItem)
     });
     mainList.append(listData);
-    console.log(listData)
 }
