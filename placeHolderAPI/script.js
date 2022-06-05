@@ -1,30 +1,32 @@
+const app = document.getElementById('app');
 const idUser = document.getElementById('idUser');
-
-getUsers() 
+const ul = document.createElement('ul');
 
 async function getUsers() {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
     const getData = await response.json();
-    console.log(getData, typeof getData);
 
-    let arrayy = []
-    arrayy.push(getData);
-
-    document.getElementById("UserId").innerHTML = getData[0].id;
-    document.getElementById("UserName").innerHTML = getData[0].name;
-    document.getElementById("UserEmail").innerHTML = getData[0].email;
-    document.getElementById("UserPhone").innerHTML = getData[0].phone;
-
-    // for(let i = 0; i<getData.length; i++) {
-    //     //console.log(getData[i]);
-    //     document.getElementById('idUser').textContent = getData[i].id;
-    //     document.getElementById('userName').textContent = getData[i].name;
-    // }
+    getDataP(getData);
 }
 
-// fetch('https://jsonplaceholder.typicode.com/users')
-//     .then(response => {
-//         return response.json();
-//     }).then(getData => {
-//         console.log(getData);
-//     })
+getUsers()
+    .catch(err => {
+        console.log('Error bbsita')
+        console.error(err)
+    })
+
+const getDataP = (getData) => {
+    for (let i = 0; i < getData.length; i++) {
+        const ul = document.createElement('ul');
+        const templateList = `
+            <li>user-id: ${getData[i].id}</li>
+            <li>user-id: ${getData[i].name}</li>
+            <li>user-id: ${getData[i].email}</li>
+            <li>user-id: ${getData[i].phone}</li>
+        `
+        ul.innerHTML = templateList;
+        app.append(ul);
+    }
+
+    console.log(app);
+}
