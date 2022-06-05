@@ -21,17 +21,3 @@ async function callDogAPI() {
     document.getElementById('dog').src = url;
     document.getElementById('dog2').src = url2;
 }
-
-//normal way to fetch()
-// fetch('https://dog.ceo/api/breeds/image/random').then(response => {
-//     console.log(response);
-//     return response.json();
-// }).then(si => {
-//     console.log(si);
-//     const url = si.message;
-//     console.log(url);
-//     document.getElementById('dog').src = url;
-// }).catch(err => {
-//     console.log('error');
-//     console.error(err);
-// });
