@@ -10,6 +10,6 @@ async function getData() {
     document.getElementById('lat').textContent = latitude;
     document.getElementById('lon').textContent = longitude;
 }
-
-
 getData();
+
+setInterval(getData, 1000);
