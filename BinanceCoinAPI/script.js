@@ -11,7 +11,7 @@ async function getData(input) {
             'https://api2.binance.com/api/v3/ticker/24hr'
         );
         const ans = await response.json();
-
+            console.log(ans);
         let list = [];
         if (input > 0 && input <= 2066) {
             //this push data into the list[array] from the json file
