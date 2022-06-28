@@ -1,0 +1,25 @@
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: beige;
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+.userCard--list {
+    list-style: none;
+}
+
+.userCard--list li span {
+    font-weight: bold;
+}
