@@ -1,5 +1,6 @@
 #app {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -8,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30rem;
+    width: 28rem;
     margin: 2rem;
     padding: 1rem;
     background-color: beige;
@@ -22,4 +23,23 @@
 
 .userCard--list li span {
     font-weight: bold;
+}
+
+/*btn*/
+
+.update {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#update--btn {
+    width: 100px;
+    height: 2rem;
+    cursor: pointer;
+}
+
+#update--btn:hover {
+    background-color: rgb(233, 132, 132);
+    transition: .3s ease-out;
 }
